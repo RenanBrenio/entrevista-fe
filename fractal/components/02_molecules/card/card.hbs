@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="card-header">
+        {{> '@card-title' label=title}}
+        {{> '@card-author' label=author}}
+        {{> '@card-job' label=job}}
+    </div>
+    <div class="card-bottom">
+        {{render '@card-play'}}
+        <span>
+            {{render '@card-clock'}}
+            {{> '@card-duration' label=duration}}
+        </span>
+    </div>
+</div>

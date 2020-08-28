@@ -1,0 +1,19 @@
+<div class="text-center">
+  {{> '@title' text=this.text shadow=this.shadow line=this.line circle=this.circle}}
+
+  {{render '@tab-menu'}}
+
+  <div class="tab-content">
+    {{#each category}}
+      <div class="tab-cat {{this.label}}">
+        {{#each episode}}
+          <div class="tab-item">
+            {{> '@card' this}}
+          </div>
+        {{/each}}
+      </div>
+    {{/each}}
+  </div>
+
+  {{> '@cta' this.cta}}
+</div>

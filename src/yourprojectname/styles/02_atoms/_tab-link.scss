@@ -1,0 +1,26 @@
+.tab-link{
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    padding: 0.5rem;
+    color: $dark !important;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: $dark;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%) scale(0,1);
+        transition: 0.25s ease-in-out;
+    }
+    &--active::before{
+        transform: translateX(-50%) scale(1,1);
+    }
+    & + .tab-link{
+        margin-left: 1rem;
+    }
+}

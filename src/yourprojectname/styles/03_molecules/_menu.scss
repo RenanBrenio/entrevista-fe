@@ -1,0 +1,22 @@
+.menu-button{
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    width: 2rem;
+    height: 2rem;
+    padding: 4px 0;
+    background: none;
+    border: 0;
+    appearance: none;
+    cursor: pointer;
+    outline: none !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    .bar{
+        width: 1.5rem;
+        height: 3px;
+        background: $dark;
+    }
+}

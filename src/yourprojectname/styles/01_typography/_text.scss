@@ -36,7 +36,7 @@ p {
 
 a {
   color: $dark-grey;
-  
+  text-decoration: none;
   &:hover {
     color: $success-green;
   }

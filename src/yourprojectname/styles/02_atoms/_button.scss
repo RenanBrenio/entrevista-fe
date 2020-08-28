@@ -2,16 +2,26 @@
   position: relative;
   font-family: $font-regular;
   font-weight: 700;
-  background: $white;
-  border: 2px solid $black;
-  color: $black;
+  background: none;
+  border: 2px solid $dark;
+  outline: none !important;
+  box-shadow: 0px 0px 34px #0000001A;
+  color: $dark;
   text-transform: uppercase;
-  padding: rem(10px 30px);
-  min-height: rem(45px);
+  padding: rem(14px 30px);
+  min-height: rem(50px);
   min-width: rem(165px);
   display: inline-block;
   text-align: center;
   overflow: hidden;
+  cursor: pointer;
+  transition: .3s background ease-out, .3s color ease-out;
+
+  &:focus,
+  &:hover{
+    background: $dark;
+    color: $white;
+  }
 
   &::before {
     content: '';
@@ -20,7 +30,7 @@
     height: 100%;
     right: 0;
     top: 0;
-    background: rgba(26, 101, 167, .1);
+    background: rgba(255, 255, 255, .1);
     transform: skewX(35deg) translateX(-112%);
     transition: .3s transform ease-out;
   }
@@ -29,6 +39,30 @@
     &::before {
       transform: skewX(35deg) translateX(112%);
       transition: 0s;
+    }
+  }
+
+  &--lg {
+    padding: rem(19px 30px);
+  }
+
+  &--dark {
+    background: $dark;
+    color: $white;
+    &:focus,
+    &:hover {
+      background: $dark-grey;
+    }
+  }
+
+  &--primary {
+    border-color: $primary;
+    background: $primary;
+    color: $dark;
+    &:focus,
+    &:hover {
+      background: lighten($primary, 5);
+      color: $dark;
     }
   }
 

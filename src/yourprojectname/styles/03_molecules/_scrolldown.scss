@@ -1,0 +1,25 @@
+.scroll-down{
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 2rem;
+    height: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .arrow{
+        animation: arrowDown 800ms infinite;
+        animation-play-state: paused;
+    }
+    &:hover .arrow{
+        animation-play-state: running;
+    }
+    @keyframes arrowDown {
+        60% {
+            transform: translateY(-0.5rem);
+        }
+    }
+}
